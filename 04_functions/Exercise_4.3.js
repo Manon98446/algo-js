@@ -1,3 +1,9 @@
+const readlineSync = require("readline-sync");
+
+function rand10(){
+    return parseInt(Math.random()*10);
+}
+console.log(rand10());
 
 /*
 Exercise 4.3
@@ -9,3 +15,16 @@ Write a documentation for the multiRand(n) function.
 Use that function to create a program that will ask the number of random numbers 
 to generate then display that same number of random numbers.
 */
+
+
+
+
+//let a = readlineSync.questionInt("Please enter a number: ");
+function multiRand(n){
+    let arr=[];
+    for(i=0; i<n; i++){
+        arr[i]=rand10();
+    }
+    return arr;
+}
+console.log(multiRand(readlineSync.questionInt("Enter a number: ")));
