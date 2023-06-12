@@ -7,13 +7,15 @@ If that number is anything other than 42 display "Are you sure?" and ask again.
 (This program should never end as long as the user didn't chose 42).
 */
 
-let userNumber=readlineSync.question("Please enter your favorite number : ");
-userNumber=parseInt(userNumber);
+let userNumber=readlineSync.questionInt("Please enter your favorite number : ");
+
 
 while (userNumber!=42){
     console.log("Are you sure?")
-    userNumber=readlineSync.question("Please enter your favorite number: ")
+    userNumber=readlineSync.question("Please enter your favorite number: ");
 }
+
+
 if (userNumber == 42){
     console.log("Yeeey")
 }
